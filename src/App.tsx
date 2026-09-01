@@ -2,6 +2,7 @@ import { AddExpenseForm } from "./components/forms/AddExpenseForm";
 import { ExpenseList } from "./components/ExpenseList";
 import { BudgetSetter } from "./components/forms/BudgetSetter";
 import { CategoryPieChart } from "./components/charts/CategoryPieChart";
+import { DailyTrendChart } from "./components/charts/DailyTrendChart";
 import { useExpenseStore } from "./store/expenseStore";
 import { formatRupiah } from "./utils/format";
 import { Wallet, TrendingDown } from "lucide-react";
@@ -49,8 +50,9 @@ function App() {
         </div>
 
         {/* BARIS BARU: Tambahkan Grafik di Bagian Bawah */}
-        <div className="mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <CategoryPieChart />
+          <DailyTrendChart />
         </div>
 
       </div>
