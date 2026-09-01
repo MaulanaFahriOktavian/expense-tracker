@@ -23,3 +23,4 @@ export const formatDate = (dateString: string): string => {
 export const generateId = (): string => {
     return crypto.randomUUID();
 };
+

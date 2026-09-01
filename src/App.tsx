@@ -1,6 +1,7 @@
 import { AddExpenseForm } from "./components/forms/AddExpenseForm";
 import { ExpenseList } from "./components/ExpenseList";
-import { CategoryPieChart } from "./components/charts/CategoryPieChart"; // <-- Tambahkan import ini
+import { BudgetSetter } from "./components/forms/BudgetSetter";
+import { CategoryPieChart } from "./components/charts/CategoryPieChart";
 import { useExpenseStore } from "./store/expenseStore";
 import { formatRupiah } from "./utils/format";
 import { Wallet, TrendingDown } from "lucide-react";
