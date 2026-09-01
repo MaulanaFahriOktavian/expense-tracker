@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Dark mode styles untuk Form Inputs */
+.dark input,
+.dark select,
+.dark textarea {
+  background-color: #1f2937; /* gray-800 */
+  border-color: #374151; /* gray-700 */
+  color: #f9fafb; /* gray-50 */
+}
+
+.dark input::placeholder {
+  color: #9ca3af; /* gray-400 */
+}
+
+.dark input:focus,
+.dark select:focus {
+  border-color: #3b82f6; /* blue-500 */
+  ring-color: #3b82f6;
+}

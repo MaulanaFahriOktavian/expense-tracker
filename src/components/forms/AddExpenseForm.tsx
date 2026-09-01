@@ -39,31 +39,37 @@ export const AddExpenseForm = () => {
     reset();
   };
 
-  return (
+   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 space-y-4"
+      className="bg-white p-4 sm:p-6 rounded-xl shadow-sm border border-gray-100 space-y-4"
     >
-      <h2 className="text-xl font-bold text-gray-800 mb-4">Tambah Pengeluaran</h2>
+      <h2 className="text-lg sm:text-xl font-bold text-gray-800 mb-4">
+        Tambah Pengeluaran
+      </h2>
 
       {/* Input Nominal */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">Nominal (Rp)</label>
+        <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">
+          Nominal (Rp)
+        </label>
         <input
           type="number"
           {...register("amount")}
           placeholder="Contoh: 25000"
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+          className="w-full px-3 sm:px-4 py-2 sm:py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-sm sm:text-base"
         />
         {errors.amount && <p className="text-red-500 text-xs mt-1">{errors.amount.message}</p>}
       </div>
 
       {/* Input Kategori */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">Kategori</label>
+        <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">
+          Kategori
+        </label>
         <select
           {...register("category")}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition bg-white"
+          className="w-full px-3 sm:px-4 py-2 sm:py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition bg-white text-sm sm:text-base"
         >
           <option value="">Pilih Kategori</option>
           {CATEGORIES.map((cat) => (
@@ -77,23 +83,27 @@ export const AddExpenseForm = () => {
 
       {/* Input Deskripsi */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">Deskripsi</label>
+        <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">
+          Deskripsi
+        </label>
         <input
           type="text"
           {...register("description")}
           placeholder="Contoh: Makan siang di warteg"
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+          className="w-full px-3 sm:px-4 py-2 sm:py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-sm sm:text-base"
         />
         {errors.description && <p className="text-red-500 text-xs mt-1">{errors.description.message}</p>}
       </div>
 
       {/* Input Tanggal */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">Tanggal</label>
+        <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">
+          Tanggal
+        </label>
         <input
           type="date"
           {...register("date")}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+          className="w-full px-3 sm:px-4 py-2 sm:py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-sm sm:text-base"
         />
         {errors.date && <p className="text-red-500 text-xs mt-1">{errors.date.message}</p>}
       </div>
@@ -101,7 +111,7 @@ export const AddExpenseForm = () => {
       {/* Tombol Submit */}
       <button
         type="submit"
-        className="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition shadow-md hover:shadow-lg"
+        className="w-full bg-blue-600 text-white font-semibold py-2.5 sm:py-3 rounded-lg hover:bg-blue-700 transition shadow-md hover:shadow-lg text-sm sm:text-base"
       >
         Simpan Pengeluaran
       </button>
