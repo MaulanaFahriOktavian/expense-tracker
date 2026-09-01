@@ -1,5 +1,6 @@
 import { AddExpenseForm } from "./components/forms/AddExpenseForm";
 import { ExpenseList } from "./components/ExpenseList";
+import { CategoryPieChart } from "./components/charts/CategoryPieChart"; // <-- Tambahkan import ini
 import { useExpenseStore } from "./store/expenseStore";
 import { formatRupiah } from "./utils/format";
 import { Wallet, TrendingDown } from "lucide-react";
@@ -33,17 +34,22 @@ function App() {
           <Wallet size={80} className="text-blue-400 opacity-50" />
         </div>
 
-        {/* Grid Layout: Form di kiri, List di kanan (di desktop) */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Kolom Kiri: Form Input (Lebar 1/3) */}
+        {/* Grid Layout: Form di kiri, List di kanan */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+          {/* Kolom Kiri: Form Input */}
           <div className="lg:col-span-1">
             <AddExpenseForm />
           </div>
 
-          {/* Kolom Kanan: Daftar Pengeluaran (Lebar 2/3) */}
+          {/* Kolom Kanan: Daftar Pengeluaran */}
           <div className="lg:col-span-2">
             <ExpenseList />
           </div>
+        </div>
+
+        {/* BARIS BARU: Tambahkan Grafik di Bagian Bawah */}
+        <div className="mb-8">
+          <CategoryPieChart />
         </div>
 
       </div>
